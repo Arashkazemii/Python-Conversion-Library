@@ -141,3 +141,12 @@ def areaCon(value, inScale, outScale):
         return value
 
 
+# Test
+print('''Scales : Square meter': 'm2', 'Square kilometer': 'km2', 'Square centimeter': 'cm2', 
+        'Square millimeter': 'mm2', 'Hectare': 'ha', 'Square foot': 'ft2', 'Square yard': 'yd2', 'Acre': 'ac''')
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {areaCon(value,inScale,outScale)} {outScale}')
