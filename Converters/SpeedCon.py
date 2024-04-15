@@ -58,3 +58,11 @@ def speedCon(value, inScale, outScale) :
     else :
         print("Undefined Scale")
 
+# Test!
+print("Scales : Meter per second': 'm/s', 'Kilometer per hour': 'km/h', 'Mile per hour': 'mph', 'Knot': 'kn', 'Foot per second': 'ft/s")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {speedCon(value,inScale,outScale)} {outScale}')
