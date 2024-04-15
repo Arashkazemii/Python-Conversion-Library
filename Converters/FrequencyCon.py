@@ -41,3 +41,10 @@ def frequencyCon(value, inScale, outScale):
         return value
     
     
+print("Scales : Hertz': 'Hz', 'Kilohertz': 'kHz', 'Megahertz': 'MHz', 'Gigahertz': 'GHz")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ')
+outScale = input('Enter Desired Scale :  ')
+
+print(f'{value} {inScale} = {frequencyCon(value,inScale,outScale)} {outScale}')
