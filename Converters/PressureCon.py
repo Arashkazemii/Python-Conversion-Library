@@ -1,0 +1,67 @@
+def pressureCon(value, inScale, outScale) :
+    pressureScaleDict = {'Bar': 'bar', 'Pascal': 'pa', 'Pound per Square inch': 'psi', 'Standard Atmosphere': 'atm', 'Torr': 'torr'}
+    
+    if inScale == 'bar' :
+        if outScale == 'pa' :
+            return value * 100000
+        elif outScale == 'psi' :
+            return value * 14.504
+        elif outScale == 'atm' :
+            return value / 1.013
+        elif outScale == 'torr' :
+            return value * 750.062
+        else :
+            print("Undefined Scale")
+    
+    elif inScale == 'pa' :
+        if outScale == 'bar' :
+            return value / 100000
+        elif outScale == 'psi' :
+            return value / 6895
+        elif outScale == 'atm' :
+            return value / 101300
+        elif outScale == 'torr' :
+            return value / 133.3
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'psi' :
+        if outScale == 'bar' :
+            return value / 14.504
+        elif outScale == 'pa' :
+            return value * 6894.76
+        elif outScale == 'atm' :
+            return value / 14.696
+        elif outScale == 'torr' :
+            return value * 51.7149
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'atm' :
+        if outScale == 'bar' :
+            return value * 1.013
+        elif outScale == 'pa' :
+            return value * 101300
+        elif outScale == 'psi' :
+            return value * 14.696
+        elif outScale == 'torr' :
+            return value * 760
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'torr' :
+        if outScale == 'bar' :
+            return value / 1.013
+        elif outScale == 'pa' :
+            return value * 133.3
+        elif outScale == 'psi' :
+            return value / 51.715
+        elif outScale == 'atm' :
+            return value / 760
+        else :
+            print("Undefined Scale")
+            
+    else :
+            print("Undefined Scale")
+
+
