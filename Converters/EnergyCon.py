@@ -114,7 +114,7 @@ def energyCon(value, inScale, outScale):
 print("Scales : Joule': 'J', 'Kilojoule': 'kJ', 'Calorie': 'cal', 'Kilocalorie': 'kcal', 'Electronvolt': 'eV', 'British thermal unit': 'BTU', 'Foot-pound': 'ft-lb")
 
 value = float(input("Enter Value :  "))
-inScale = input('Enter Value Scale :  ').lower()
-outScale = input('Enter Desired Scale :  ').lower()
+inScale = input('Enter Value Scale :  ')
+outScale = input('Enter Desired Scale :  ')
 
 print(f'{value} {inScale} = {energyCon(value,inScale,outScale)} {outScale}')

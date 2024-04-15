@@ -33,7 +33,7 @@ def tempCon(value, inScale, outScale) :
 print("Scales : Celsius' : 'C', 'Fahrenheit' : 'F', 'Kelvin' : 'K'")
 
 value = float(input("Enter Value :  "))
-inScale = input('Enter Value Scale :  ').lower()
-outScale = input('Enter Desired Scale :  ').lower()
+inScale = input('Enter Value Scale :  ').upper()
+outScale = input('Enter Desired Scale :  ').upper()
 
 print(f'{value} {inScale} = {tempCon(value,inScale,outScale)} {outScale}')
