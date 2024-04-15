@@ -331,7 +331,7 @@ def lengthCon(value, inScale, outScale):
             return value * 72913.4
         else:
             return value
-        
+
 def massCon(value, inScale, outScale) :
     weightScaleDict = {'Kilogram': 'kg', 'Gram': 'g', 'Milligram': 'mg', 'Microgram': 'µg', 'Metric Ton': 't', 'Pound': 'lb', 'Ounce': 'oz'}
     
@@ -449,4 +449,395 @@ def massCon(value, inScale, outScale) :
             
     else :
         print("Undefined Scale")
-        
+
+def pressureCon(value, inScale, outScale) :
+    pressureScaleDict = {'Bar': 'bar', 'Pascal': 'pa', 'Pound per Square inch': 'psi', 'Standard Atmosphere': 'atm', 'Torr': 'torr'}
+    
+    if inScale == 'bar' :
+        if outScale == 'pa' :
+            return value * 100000
+        elif outScale == 'psi' :
+            return value * 14.504
+        elif outScale == 'atm' :
+            return value / 1.013
+        elif outScale == 'torr' :
+            return value * 750.062
+        else :
+            print("Undefined Scale")
+    
+    elif inScale == 'pa' :
+        if outScale == 'bar' :
+            return value / 100000
+        elif outScale == 'psi' :
+            return value / 6895
+        elif outScale == 'atm' :
+            return value / 101300
+        elif outScale == 'torr' :
+            return value / 133.3
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'psi' :
+        if outScale == 'bar' :
+            return value / 14.504
+        elif outScale == 'pa' :
+            return value * 6894.76
+        elif outScale == 'atm' :
+            return value / 14.696
+        elif outScale == 'torr' :
+            return value * 51.7149
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'atm' :
+        if outScale == 'bar' :
+            return value * 1.013
+        elif outScale == 'pa' :
+            return value * 101300
+        elif outScale == 'psi' :
+            return value * 14.696
+        elif outScale == 'torr' :
+            return value * 760
+        else :
+            print("Undefined Scale")
+            
+    elif inScale == 'torr' :
+        if outScale == 'bar' :
+            return value / 1.013
+        elif outScale == 'pa' :
+            return value * 133.3
+        elif outScale == 'psi' :
+            return value / 51.715
+        elif outScale == 'atm' :
+            return value / 760
+        else :
+            print("Undefined Scale")
+            
+    else :
+            print("Undefined Scale")
+
+def tempCon(value, inScale, outScale) :
+    tempScaleDict = {'Celsius' : 'C', 'Fahrenheit' : 'F', 'Kelvin' : 'K'}
+    
+    if inScale == 'C' :
+        if outScale == 'F' :
+            return value * 9/5 + 32
+        elif outScale == 'K' :
+            return value + 273.15
+        else :
+            print("Undefined Scale")
+    
+    elif inScale == 'F' :
+        if outScale == 'C' :
+            return (value - 32) * 5/9
+        elif outScale == 'K' :
+            return (value - 32) * 5/9 + 273.15
+        else :
+            print("Undefined Scale")
+    
+    elif inScale == 'K' :
+        if outScale == 'C' :
+            return value - 273.15
+        elif outScale == 'F' :
+            return (value - 273.15) * 9/5 + 32
+        else :
+            print("Undefined Scale")
+    
+    else :
+        print("Undefined Scale")
+
+def areaCon(value, inScale, outScale):
+    areaScaleDict = {'Square meter': 'm2', 'Square kilometer': 'km2', 'Square centimeter': 'cm2', 'Square millimeter': 'mm2', 'Hectare': 'ha', 'Square foot': 'ft2', 'Square yard': 'yd2', 'Acre': 'ac'}
+
+    if inScale == 'm2':
+        if outScale == 'km2':
+            return value * 1e-6
+        elif outScale == 'cm2':
+            return value * 10000
+        elif outScale == 'mm2':
+            return value * 1e+6
+        elif outScale == 'ha':
+            return value * 1e-4
+        elif outScale == 'ft2':
+            return value * 10.7639
+        elif outScale == 'yd2':
+            return value * 1.19599
+        elif outScale == 'ac':
+            return value * 0.000247105
+        else:
+            return value
+    elif inScale == 'km2':
+        if outScale == 'm2':
+            return value * 1e+6
+        elif outScale == 'cm2':
+            return value * 1e+10
+        elif outScale == 'mm2':
+            return value * 1e+12
+        elif outScale == 'ha':
+            return value * 100
+        elif outScale == 'ft2':
+            return value * 10763900.389
+        elif outScale == 'yd2':
+            return value * 11959900.01
+        elif outScale == 'ac':
+            return value * 247.105
+        else:
+            return value
+    elif inScale == 'cm2':
+        if outScale == 'm2':
+            return value * 1e-4
+        elif outScale == 'km2':
+            return value * 1e-10
+        elif outScale == 'mm2':
+            return value * 100
+        elif outScale == 'ha':
+            return value * 1e-8
+        elif outScale == 'ft2':
+            return value * 0.00107639
+        elif outScale == 'yd2':
+            return value * 0.00119599
+        elif outScale == 'ac':
+            return value * 2.47105e-8
+        else:
+            return value
+    elif inScale == 'mm2':
+        if outScale == 'm2':
+            return value * 1e-6
+        elif outScale == 'km2':
+            return value * 1e-12
+        elif outScale == 'cm2':
+            return value * 0.01
+        elif outScale == 'ha':
+            return value * 1e-10
+        elif outScale == 'ft2':
+            return value * 1.07639e-5
+        elif outScale == 'yd2':
+            return value * 1.19599e-5
+        elif outScale == 'ac':
+            return value * 2.47105e-10
+        else:
+            return value
+    elif inScale == 'ha':
+        if outScale == 'm2':
+            return value * 10000
+        elif outScale == 'km2':
+            return value * 0.01
+        elif outScale == 'cm2':
+            return value * 1e+8
+        elif outScale == 'mm2':
+            return value * 1e+10
+        elif outScale == 'ft2':
+            return value * 107639.104
+        elif outScale == 'yd2':
+            return value * 119599.004
+        elif outScale == 'ac':
+            return value * 2.47105
+        else:
+            return value
+    elif inScale == 'ft2':
+        if outScale == 'm2':
+            return value * 0.092903
+        elif outScale == 'km2':
+            return value * 9.2903e-8
+        elif outScale == 'cm2':
+            return value * 929.03
+        elif outScale == 'mm2':
+            return value * 92903.04
+        elif outScale == 'ha':
+            return value * 9.2903e-6
+        elif outScale == 'yd2':
+            return value * 0.111111
+        elif outScale == 'ac':
+            return value * 2.2957e-5
+        else:
+            return value
+    elif inScale == 'yd2':
+        if outScale == 'm2':
+            return value * 0.836127
+        elif outScale == 'km2':
+            return value * 8.36127e-7
+        elif outScale == 'cm2':
+            return value * 8361.27
+        elif outScale == 'mm2':
+            return value * 836127
+        elif outScale == 'ha':
+            return value * 8.36127e-5
+        elif outScale == 'ft2':
+            return value * 9
+        elif outScale == 'ac':
+            return value * 0.000206612
+        else:
+            return value
+    elif inScale == 'ac':
+        if outScale == 'm2':
+            return value * 4046.86
+        elif outScale == 'km2':
+            return value * 0.00404686
+        elif outScale == 'cm2':
+            return value * 40468564.2
+        elif outScale == 'mm2':
+            return value * 4.04686e+9
+        elif outScale == 'ha':
+            return value * 0.404686
+        elif outScale == 'ft2':
+            return value * 43560
+        elif outScale == 'yd2':
+            return value * 4840
+        else:
+            return value
+    else:
+        return value
+
+def energyCon(value, inScale, outScale):
+    energyScaleDict = {'Joule': 'J', 'Kilojoule': 'kJ', 'Calorie': 'cal', 'Kilocalorie': 'kcal', 'Electronvolt': 'eV', 'British thermal unit': 'BTU', 'Foot-pound': 'ft-lb'}
+
+    if inScale == 'J':
+        if outScale == 'kJ':
+            return value * 0.001
+        elif outScale == 'cal':
+            return value * 0.239006
+        elif outScale == 'kcal':
+            return value * 0.000239006
+        elif outScale == 'eV':
+            return value * 6.242e+18
+        elif outScale == 'BTU':
+            return value * 0.000947817
+        elif outScale == 'ft-lb':
+            return value * 0.737562
+        else:
+            return value
+    elif inScale == 'kJ':
+        if outScale == 'J':
+            return value * 1000
+        elif outScale == 'cal':
+            return value * 239.006
+        elif outScale == 'kcal':
+            return value * 0.239006
+        elif outScale == 'eV':
+            return value * 6.242e+21
+        elif outScale == 'BTU':
+            return value * 0.947817
+        elif outScale == 'ft-lb':
+            return value * 737.562
+        else:
+            return value
+    elif inScale == 'cal':
+        if outScale == 'J':
+            return value * 4.184
+        elif outScale == 'kJ':
+            return value * 0.004184
+        elif outScale == 'kcal':
+            return value * 0.001
+        elif outScale == 'eV':
+            return value * 2.613e+19
+        elif outScale == 'BTU':
+            return value * 0.00396567
+        elif outScale == 'ft-lb':
+            return value * 3.08596
+        else:
+            return value
+    elif inScale == 'kcal':
+        if outScale == 'J':
+            return value * 4184
+        elif outScale == 'kJ':
+            return value * 4.184
+        elif outScale == 'cal':
+            return value * 1000
+        elif outScale == 'eV':
+            return value * 2.613e+22
+        elif outScale == 'BTU':
+            return value * 3.96567
+        elif outScale == 'ft-lb':
+            return value * 3085.96
+        else:
+            return value
+    elif inScale == 'eV':
+        if outScale == 'J':
+            return value * 1.602e-19
+        elif outScale == 'kJ':
+            return value * 1.602e-22
+        elif outScale == 'cal':
+            return value * 3.8293e-20
+        elif outScale == 'kcal':
+            return value * 3.8293e-23
+        elif outScale == 'BTU':
+            return value * 3.828e-20
+        elif outScale == 'ft-lb':
+            return value * 2.685e-19
+        else:
+            return value
+    elif inScale == 'BTU':
+        if outScale == 'J':
+            return value * 1055.06
+        elif outScale == 'kJ':
+            return value * 1.05506
+        elif outScale == 'cal':
+            return value * 252.164
+        elif outScale == 'kcal':
+            return value * 0.252164
+        elif outScale == 'eV':
+            return value * 2.611e+19
+        elif outScale == 'ft-lb':
+            return value * 778.169
+        else:
+            return value
+    elif inScale == 'ft-lb':
+        if outScale == 'J':
+            return value * 1.35582
+        elif outScale == 'kJ':
+            return value * 0.00135582
+        elif outScale == 'cal':
+            return value * 0.323831
+        elif outScale == 'kcal':
+            return value * 0.000323831
+        elif outScale == 'eV':
+            return value * 3.725e+18
+        elif outScale == 'BTU':
+            return value * 0.00128507
+        else:
+            return value
+    else:
+        return value
+
+def frequencyCon(value, inScale, outScale):
+    frequencyScaleDict = {'Hertz': 'Hz', 'Kilohertz': 'kHz', 'Megahertz': 'MHz', 'Gigahertz': 'GHz'}
+
+    if inScale == 'Hz':
+        if outScale == 'kHz':
+            return value * 0.001
+        elif outScale == 'MHz':
+            return value * 1e-6
+        elif outScale == 'GHz':
+            return value * 1e-9
+        else:
+            return value
+    elif inScale == 'kHz':
+        if outScale == 'Hz':
+            return value * 1000
+        elif outScale == 'MHz':
+            return value * 1e-3
+        elif outScale == 'GHz':
+            return value * 1e-6
+        else:
+            return value
+    elif inScale == 'MHz':
+        if outScale == 'Hz':
+            return value * 1e+6
+        elif outScale == 'kHz':
+            return value * 1000
+        elif outScale == 'GHz':
+            return value * 0.001
+        else:
+            return value
+    elif inScale == 'GHz':
+        if outScale == 'Hz':
+            return value * 1e+9
+        elif outScale == 'kHz':
+            return value * 1e+6
+        elif outScale == 'MHz':
+            return value * 1000
+        else:
+            return value
+    else:
+        return value
+
