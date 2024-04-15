@@ -23,8 +23,8 @@ import pyconversion
 
 # Example usage:
 
-print(pyconversion.temperature.temperatureCon(25, 'C', 'F'))  # Output: 77.0
-print(pyconversion.currency.speedCon(100, 'm/s', 'km/h'))    # Output: 360.0
+print(pyconversion.tempCon(25, 'C', 'F'))  # Output: 77.0
+print(pyconversion.speedCon(100, 'm/s', 'km/h'))    # Output: 360.0
 ```
 
 ## Supported Conversions
