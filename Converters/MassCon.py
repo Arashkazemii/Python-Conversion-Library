@@ -115,3 +115,12 @@ def massCon(value, inScale, outScale) :
     else :
         print("Undefined Scale")
         
+
+# Test!
+print("Scales : Kilogram': 'kg', 'Gram': 'g', 'Milligram': 'mg', 'Microgram': 'µg', 'Metric Ton': 't', 'Pound': 'lb', 'Ounce': 'oz")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {massCon(value,inScale,outScale)} {outScale}')
