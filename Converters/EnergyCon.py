@@ -1,4 +1,4 @@
-def energycon(value, inScale, outScale):
+def energyCon(value, inScale, outScale):
     energyScaleDict = {'Joule': 'J', 'Kilojoule': 'kJ', 'Calorie': 'cal', 'Kilocalorie': 'kcal', 'Electronvolt': 'eV', 'British thermal unit': 'BTU', 'Foot-pound': 'ft-lb'}
 
     if inScale == 'J':
@@ -117,4 +117,4 @@ value = float(input("Enter Value :  "))
 inScale = input('Enter Value Scale :  ').lower()
 outScale = input('Enter Desired Scale :  ').lower()
 
-print(f'{value} {inScale} = {lengthCon(value,inScale,outScale)} {outScale}')
+print(f'{value} {inScale} = {energyCon(value,inScale,outScale)} {outScale}')
