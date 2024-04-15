@@ -65,3 +65,11 @@ def pressureCon(value, inScale, outScale) :
             print("Undefined Scale")
 
 
+# Test!
+print("Scales : Bar': 'bar', 'Pascal': 'pa', 'Pound per Square inch': 'psi', 'Standard Atmosphere': 'atm', 'Torr': 'torr")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {pressureCon(value,inScale,outScale)} {outScale}')
