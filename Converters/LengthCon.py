@@ -266,3 +266,13 @@ def lengthCon(value, inScale, outScale):
         else:
             return value
         
+
+# Test
+print('''Scales : Meter': 'm', 'Kilometer': 'km', 'Centimeter': 'cm', 'Millimeter': 'mm',
+      'Micrometer': 'µm', 'Nanometer': 'nm', 'Mile': 'ml', 'Yard': 'yd','Foot': 'ft', 'Inch': 'in', 'Nautical Mile': 'nml''')
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {lengthCon(value,inScale,outScale)} {outScale}')
