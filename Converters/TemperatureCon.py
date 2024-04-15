@@ -28,3 +28,12 @@ def tempCon(value, inScale, outScale) :
     else :
         print("Undefined Scale")
         
+        
+# Test
+print("Scales : Celsius' : 'C', 'Fahrenheit' : 'F', 'Kelvin' : 'K'")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {tempCon(value,inScale,outScale)} {outScale}')
