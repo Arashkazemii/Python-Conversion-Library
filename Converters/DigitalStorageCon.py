@@ -87,3 +87,13 @@ def digitalStorageCon(value, inScale, outScale) :
     
     else :
         return value
+    
+    
+# Test
+print("Scales : 'Byte' : 'b', 'Kilobyte' : 'kb', 'Megabyte' : 'mb', 'Gigabyte' : 'gb', 'Terabyte' : 'tb', 'Petabyte' : 'pb' ")
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ')
+outScale = input('Enter Desired Scale :  ')
+
+print(f'{value} {inScale} = {digitalStorageCon(value,inScale,outScale)} {outScale}')
