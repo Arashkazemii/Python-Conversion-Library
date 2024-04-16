@@ -1,39 +1,39 @@
 def frequencyCon(value, inScale, outScale):
-    frequencyScaleDict = {'Hertz': 'Hz', 'Kilohertz': 'kHz', 'Megahertz': 'MHz', 'Gigahertz': 'GHz'}
+    frequencyScaleDict = {'Hertz': 'hz', 'Kilohertz': 'khz', 'Megahertz': 'mhz', 'Gigahertz': 'ghz'}
 
-    if inScale == 'Hz':
-        if outScale == 'kHz':
+    if inScale == 'hz':
+        if outScale == 'khz':
             return value * 0.001
-        elif outScale == 'MHz':
+        elif outScale == 'mhz':
             return value * 1e-6
-        elif outScale == 'GHz':
+        elif outScale == 'ghz':
             return value * 1e-9
         else:
             return value
-    elif inScale == 'kHz':
-        if outScale == 'Hz':
+    elif inScale == 'khz':
+        if outScale == 'hz':
             return value * 1000
-        elif outScale == 'MHz':
+        elif outScale == 'mhz':
             return value * 1e-3
-        elif outScale == 'GHz':
+        elif outScale == 'ghz':
             return value * 1e-6
         else:
             return value
-    elif inScale == 'MHz':
-        if outScale == 'Hz':
+    elif inScale == 'mhz':
+        if outScale == 'hz':
             return value * 1e+6
-        elif outScale == 'kHz':
+        elif outScale == 'khz':
             return value * 1000
-        elif outScale == 'GHz':
+        elif outScale == 'ghz':
             return value * 0.001
         else:
             return value
-    elif inScale == 'GHz':
-        if outScale == 'Hz':
+    elif inScale == 'ghz':
+        if outScale == 'hz':
             return value * 1e+9
-        elif outScale == 'kHz':
+        elif outScale == 'khz':
             return value * 1e+6
-        elif outScale == 'MHz':
+        elif outScale == 'mhz':
             return value * 1000
         else:
             return value
@@ -41,7 +41,7 @@ def frequencyCon(value, inScale, outScale):
         return value
     
     
-print("Scales : Hertz': 'Hz', 'Kilohertz': 'kHz', 'Megahertz': 'MHz', 'Gigahertz': 'GHz")
+print("Scales : Hertz': 'hz', 'Kilohertz': 'khz', 'Megahertz': 'mhz', 'Gigahertz': 'GHz")
 
 value = float(input("Enter Value :  "))
 inScale = input('Enter Value Scale :  ')
