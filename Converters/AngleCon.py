@@ -32,7 +32,7 @@ def angleCon(value, inScale, outScale):
 print("Scales: 'Degree': 'degree', 'Radian': 'radian', 'Gradian': 'gradian'")
 
 value = float(input("Enter Value: "))
-inScale = input('Enter Value Scale: ').capitalize()
-outScale = input('Enter Desired Scale: ').capitalize()
+inScale = input('Enter Value Scale: ')
+outScale = input('Enter Desired Scale: ')
 
 print(f'{value} {inScale} = {angleCon(value, inScale, outScale)} {outScale}')
