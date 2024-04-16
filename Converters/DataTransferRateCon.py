@@ -88,3 +88,14 @@ def dataTransferRateCon(value, inScale, outScale) :
     
     else :
         return value
+    
+
+# Test
+print("""Scales : 'Bit per Second' : 'bs', 'Kilobit per Second' : 'kbs', 'Megabit per Second' : 'mbs', 'Gigabit per Second' : 'gbs',
+                                'Terabit per Second' : 'tbs', 'Petabit per Second' : 'pbs' """)
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ')
+outScale = input('Enter Desired Scale :  ')
+
+print(f'{value} {inScale} = {dataTransferRateCon(value,inScale,outScale)} {outScale}')
