@@ -1,4 +1,4 @@
-def volume_converter(value, inScale, outScale):
+def volumeCon(value, inScale, outScale):
     volumeScaleDict = {'Cubic meter': 'm³', 'Liter': 'l', 'Milliliter': 'mL', 'Cubic centimeter': 'cm³', 'Cubic foot': 'ft³',
                        'Cubic inch': 'in³', 'Gallon': 'gal', 'Quart': 'qt', 'Pint': 'pt', 'Cup': 'cup', 'Fluid ounce': 'fl oz'}
 
@@ -257,3 +257,14 @@ def volume_converter(value, inScale, outScale):
             return value
     else:
         return value
+    
+    
+# Test
+print('''Cubic meter': 'm³', 'Liter': 'l', 'Milliliter': 'mL', 'Cubic centimeter': 'cm³', 'Cubic foot': 'ft³',
+        'Cubic inch': 'in³', 'Gallon': 'gal', 'Quart': 'qt', 'Pint': 'pt', 'Cup': 'cup', 'Fluid ounce': 'fl oz''')
+
+value = float(input("Enter Value :  "))
+inScale = input('Enter Value Scale :  ').lower()
+outScale = input('Enter Desired Scale :  ').lower()
+
+print(f'{value} {inScale} = {volumeCon(value,inScale,outScale)} {outScale}')
