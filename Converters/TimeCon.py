@@ -1,4 +1,4 @@
-def time_converter(value, inScale, outScale):
+def timeCon(value, inScale, outScale):
     timeScaleDict = {'Second': 's', 'Millisecond': 'ms', 'Microsecond': 'µs', 'Nanosecond': 'ns', 'Minute': 'min', 'Hour': 'hr', 'Day': 'day', 'Week': 'week'}
 
     if inScale == 's':
@@ -146,3 +146,13 @@ def time_converter(value, inScale, outScale):
             return value
     else:
         return value
+    
+
+# Test!
+print("Scales: 'Second': 's', 'Millisecond': 'ms', 'Microsecond': 'µs', 'Nanosecond': 'ns', 'Minute': 'min', 'Hour': 'hr', 'Day': 'day', 'Week': 'week' ")
+
+value = float(input("Enter Value: "))
+inScale = input('Enter Value Scale: ')
+outScale = input('Enter Desired Scale: ')
+
+print(f'{value} {inScale} = {timeCon(value, inScale, outScale)} {outScale}')

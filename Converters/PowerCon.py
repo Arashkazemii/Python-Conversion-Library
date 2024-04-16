@@ -45,3 +45,11 @@ def powerCon(value, inScale, outScale):
         print("Undefined Scale")
 
 
+# Test!
+print("Scales: 'Watt': 'watt', 'Kilowatt': 'kilowatt', 'Megawatt': 'megawatt', 'Horsepower': 'horsepower'")
+
+value = float(input("Enter Value: "))
+inScale = input('Enter Value Scale: ')
+outScale = input('Enter Desired Scale: ')
+
+print(f'{value} {inScale} = {powerCon(value, inScale, outScale)} {outScale}')
