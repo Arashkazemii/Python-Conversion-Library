@@ -11,7 +11,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 3.281
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'km/h' :
         if outScale == 'm/s':
@@ -23,7 +23,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value / 1.097
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'mph' :
         if outScale == 'm/s':
@@ -35,7 +35,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 1.467
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'kn' :
         if outScale == 'm/s':
@@ -47,7 +47,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 1.688
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'ft/s' :
         if outScale == 'm/s':
@@ -59,10 +59,10 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'kn' :
             return value / 1.688
         else :
-            print("Undefined Scale")
+            return value
             
     else :
-        print("Undefined Scale")
+        return value
 
 def lengthCon(value, inScale, outScale):
     lengthScaleDict = {'Meter': 'm', 'Kilometer': 'km', 'Centimeter': 'cm', 'Millimeter': 'mm', 'Micrometer': 'µm', 'Nanometer': 'nm', 'Mile': 'ml', 'Yard': 'yd',
@@ -349,7 +349,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 28.35
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'kg' :
         if outScale == 'g' :
@@ -365,7 +365,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 35.274
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'mg' :
         if outScale == 'g' :
@@ -381,7 +381,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 28350
         else :
-            print("Undefined Scale")
+            return value
         
     elif inScale == 'µg' :
         if outScale == 'g' :
@@ -397,7 +397,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 2.835e+7
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 't' :
         if outScale == 'g' :
@@ -413,7 +413,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 35270
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'lb' :
         if outScale == 'g' :
@@ -429,7 +429,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 16
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'oz' :
         if outScale == 'g' :
@@ -445,10 +445,10 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'lb' :
             return value / 16
         else :
-            print("Undefined Scale")
+            return value
             
     else :
-        print("Undefined Scale")
+        return value
 
 def pressureCon(value, inScale, outScale) :
     pressureScaleDict = {'Bar': 'bar', 'Pascal': 'pa', 'Pound per Square inch': 'psi', 'Standard Atmosphere': 'atm', 'Torr': 'torr'}
@@ -463,7 +463,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 750.062
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'pa' :
         if outScale == 'bar' :
@@ -475,7 +475,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value / 133.3
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'psi' :
         if outScale == 'bar' :
@@ -487,7 +487,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 51.7149
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'atm' :
         if outScale == 'bar' :
@@ -499,7 +499,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 760
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'torr' :
         if outScale == 'bar' :
@@ -511,10 +511,10 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'atm' :
             return value / 760
         else :
-            print("Undefined Scale")
+            return value
             
     else :
-            print("Undefined Scale")
+            return value
 
 def tempCon(value, inScale, outScale) :
     tempScaleDict = {'Celsius' : 'C', 'Fahrenheit' : 'F', 'Kelvin' : 'K'}
@@ -525,7 +525,7 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'K' :
             return value + 273.15
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'F' :
         if outScale == 'C' :
@@ -533,7 +533,7 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'K' :
             return (value - 32) * 5/9 + 273.15
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'K' :
         if outScale == 'C' :
@@ -541,10 +541,10 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'F' :
             return (value - 273.15) * 9/5 + 32
         else :
-            print("Undefined Scale")
+            return value
     
     else :
-        print("Undefined Scale")
+        return value
 
 def areaCon(value, inScale, outScale):
     areaScaleDict = {'Square meter': 'm2', 'Square kilometer': 'km2', 'Square centimeter': 'cm2', 'Square millimeter': 'mm2', 'Hectare': 'ha', 'Square foot': 'ft2', 'Square yard': 'yd2', 'Acre': 'ac'}

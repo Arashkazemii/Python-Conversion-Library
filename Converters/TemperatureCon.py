@@ -7,7 +7,7 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'K' or 'k' :
             return value + 273.15
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'F' or 'f' :
         if outScale == 'C' or 'c' :
@@ -15,7 +15,7 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'K' or 'k' :
             return (value - 32) * 5/9 + 273.15
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'K' or 'k' :
         if outScale == 'C' or 'c' :
@@ -23,10 +23,10 @@ def tempCon(value, inScale, outScale) :
         elif outScale == 'F' or 'f' :
             return (value - 273.15) * 9/5 + 32
         else :
-            print("Undefined Scale")
+            return value
     
     else :
-        print("Undefined Scale")
+        return value
         
         
 # Test

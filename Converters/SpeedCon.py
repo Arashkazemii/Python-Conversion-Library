@@ -10,7 +10,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 3.281
         else :
-            print("Undefined Scale")
+            return value
     elif inScale == 'km/h' :
         if outScale == 'm/s':
             return value / 3.6
@@ -21,7 +21,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value / 1.097
         else :
-            print("Undefined Scale")
+            return value
     elif inScale == 'mph' :
         if outScale == 'm/s':
             return value / 2.237
@@ -32,7 +32,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 1.467
         else :
-            print("Undefined Scale")
+            return value
     elif inScale == 'kn' :
         if outScale == 'm/s':
             return value / 1.944
@@ -43,7 +43,7 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'ft/s' :
             return value * 1.688
         else :
-            print("Undefined Scale")
+            return value
     elif inScale == 'ft/s' :
         if outScale == 'm/s':
             return value / 3.281
@@ -54,9 +54,9 @@ def speedCon(value, inScale, outScale) :
         elif outScale == 'kn' :
             return value / 1.688
         else :
-            print("Undefined Scale")
+            return value
     else :
-        print("Undefined Scale")
+        return value
 
 # Test!
 print("Scales : Meter per second': 'm/s', 'Kilometer per hour': 'km/h', 'Mile per hour': 'mph', 'Knot': 'kn', 'Foot per second': 'ft/s")

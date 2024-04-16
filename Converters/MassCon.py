@@ -14,7 +14,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 28.35
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'kg' :
         if outScale == 'g' :
@@ -30,7 +30,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 35.274
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'mg' :
         if outScale == 'g' :
@@ -46,7 +46,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 28350
         else :
-            print("Undefined Scale")
+            return value
         
     elif inScale == 'µg' :
         if outScale == 'g' :
@@ -62,7 +62,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value / 2.835e+7
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 't' :
         if outScale == 'g' :
@@ -78,7 +78,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 35270
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'lb' :
         if outScale == 'g' :
@@ -94,7 +94,7 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'oz' :
             return value * 16
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'oz' :
         if outScale == 'g' :
@@ -110,10 +110,10 @@ def massCon(value, inScale, outScale) :
         elif outScale == 'lb' :
             return value / 16
         else :
-            print("Undefined Scale")
+            return value
             
     else :
-        print("Undefined Scale")
+        return value
         
 
 # Test!

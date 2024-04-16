@@ -9,7 +9,7 @@ def powerCon(value, inScale, outScale):
         elif outScale == 'horsepower':
             return value * 0.00134102
         else:
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'kilowatt':
         if outScale == 'watt':
@@ -19,7 +19,7 @@ def powerCon(value, inScale, outScale):
         elif outScale == 'horsepower':
             return value * 1.34102
         else:
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'megawatt':
         if outScale == 'watt':
@@ -29,7 +29,7 @@ def powerCon(value, inScale, outScale):
         elif outScale == 'horsepower':
             return value * 1341.02
         else:
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'horsepower':
         if outScale == 'watt':
@@ -39,10 +39,10 @@ def powerCon(value, inScale, outScale):
         elif outScale == 'megawatt':
             return value * 0.0007457
         else:
-            print("Undefined Scale")
+            return value
     
     else:
-        print("Undefined Scale")
+        return value
 
 
 # Test!

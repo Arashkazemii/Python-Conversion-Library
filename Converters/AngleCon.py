@@ -7,7 +7,7 @@ def angleCon(value, inScale, outScale):
         elif outScale == 'gradian':
             return value * 1.11111
         else:
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'radian':
         if outScale == 'degree':
@@ -15,7 +15,7 @@ def angleCon(value, inScale, outScale):
         elif outScale == 'gradian':
             return value * 63.6619
         else:
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'gradian':
         if outScale == 'degree':
@@ -23,10 +23,10 @@ def angleCon(value, inScale, outScale):
         elif outScale == 'radian':
             return value * 0.01570796
         else:
-            print("Undefined Scale")
+            return value
     
     else:
-        print("Undefined Scale")
+        return value
         
 # Test!
 print("Scales: 'Degree': 'degree', 'Radian': 'radian', 'Gradian': 'gradian'")

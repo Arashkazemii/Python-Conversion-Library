@@ -11,7 +11,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 750.062
         else :
-            print("Undefined Scale")
+            return value
     
     elif inScale == 'pa' :
         if outScale == 'bar' :
@@ -23,7 +23,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value / 133.3
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'psi' :
         if outScale == 'bar' :
@@ -35,7 +35,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 51.7149
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'atm' :
         if outScale == 'bar' :
@@ -47,7 +47,7 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'torr' :
             return value * 760
         else :
-            print("Undefined Scale")
+            return value
             
     elif inScale == 'torr' :
         if outScale == 'bar' :
@@ -59,10 +59,10 @@ def pressureCon(value, inScale, outScale) :
         elif outScale == 'atm' :
             return value / 760
         else :
-            print("Undefined Scale")
+            return value
             
     else :
-            print("Undefined Scale")
+            return value
 
 
 # Test!
